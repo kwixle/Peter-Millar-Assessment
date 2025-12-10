@@ -1,11 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lora&display=swap');
+@import "./vars.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lora&display=swap");
 
-// Variables based on Figma file
-$font-sans-serif: Inter, 'Helvetica Neue', sans-serif;
-$font-serif: 'Lora', 'Palatino', serif;
-$color-luxe-gray: #393A3F;
-$color-luxe-gray-light: #797B86;
-$color-white: #FFF;
 :root {
   font-family: $font-sans-serif;
   font-weight: 400;
@@ -31,8 +26,8 @@ p {
 
 .header-container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin: 50px 25px 50px 25px;
 }
@@ -42,7 +37,7 @@ p {
   font-weight: 400;
   font-size: 44px;
   line-height: 100%;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: 0px;
   margin-bottom: 25px;
@@ -53,11 +48,10 @@ p {
   font-weight: 500;
   font-size: 12px;
   line-height: 120%;
-  letter-spacing: .09em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   margin-bottom: 19px;
 }
-
 
 .centered {
   font-family: $font-sans-serif;
@@ -68,8 +62,7 @@ p {
   text-align: center;
 }
 
-
-.background-img {
+.background-img-mobile {
   width: 100vw;
   height: 945px;
   background-image: url(".\\public\\main-mobile.jpg");
@@ -80,12 +73,15 @@ p {
   padding: 0px;
 }
 
+.background-img-desktop {
+  display: none;
+}
 
 .numbered-circle {
   border-radius: 100%;
-  background-color: rgb(57, 58, 63, .75);
+  background-color: rgb(57, 58, 63, 0.75);
   width: 30px;
-  height: 30px;;
+  height: 30px;
   font-family: $font-serif;
   font-size: 16px;
   font-weight: 400;
@@ -137,7 +133,7 @@ p {
 .bullet-list-container {
   position: absolute;
   display: flex;
-  align-items: flex-start; 
+  align-items: flex-start;
   flex-direction: column;
   margin: 0px 25px 50px 25px;
   left: 1vw;
@@ -147,7 +143,7 @@ p {
 
 .bullet-point-container {
   display: flex;
-  align-items: flex-start; 
+  align-items: flex-start;
   color: $color-luxe-gray;
   gap: 15px;
 }
@@ -163,10 +159,9 @@ p {
   min-width: 12px;
 }
 
-.bullet-content-container{
-  display: flex; 
+.bullet-content-container {
+  display: flex;
   margin-right: auto;
-  align-items: left; 
   flex-direction: column;
   gap: 4px;
 }
@@ -191,14 +186,19 @@ p {
   padding: 50px 25px 50px 25px;
 }
 
-.double-image-container {
+.double-image-container-mobile {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100vw;
-  align-items: flex-start; 
+  align-items: flex-start;
   justify-content: space-between;
-  img{
+  margin-bottom: 50px;
+  img {
     width: 48%;
   }
+}
+
+.double-image-container-desktop {
+  display: none;
 }
