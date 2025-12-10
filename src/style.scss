@@ -186,3 +186,19 @@ p {
   font-weight: 400;
   line-height: 120%;
 }
+
+.padded {
+  padding: 50px 25px 50px 25px;
+}
+
+.double-image-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100vw;
+  align-items: flex-start; 
+  justify-content: space-between;
+  img{
+    width: 48%;
+  }
+}
